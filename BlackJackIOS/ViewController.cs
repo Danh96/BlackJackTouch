@@ -11,11 +11,11 @@ namespace BlackJackIOS
 			
 		}
 
-		public override void ViewDidAppear(bool animated)
-		{
-			base.ViewDidAppear(animated);
+		public override void ViewWillAppear(bool animated)
+        {
+			base.ViewWillAppear(animated);
 			NavigationController.SetNavigationBarHidden(true, true);
-		}
+        }
 
 		public override void ViewDidLoad()
 		{
@@ -24,9 +24,6 @@ namespace BlackJackIOS
 			ButtonStartGame.Layer.CornerRadius = 5;
 			ButtonStartGame.Layer.BorderWidth = 1;
 			ButtonStartGame.Layer.BorderColor = UIColor.White.CGColor;
-            
-			NavigationController.NavigationBar.TintColor = UIColor.White;
-			NavigationController.NavigationBar.BarTintColor = UIColor.Red;
             
 			ButtonStartGame.TouchUpInside += (sender, e) =>
 			{
