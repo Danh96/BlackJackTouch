@@ -41,6 +41,7 @@ namespace BlackJackIOS
 			ButtonHit.Layer.CornerRadius = 5;
 			ButtonHit.Layer.BorderWidth = 1;
 			ButtonHit.Layer.BorderColor = UIColor.White.CGColor;
+            
         }
 	}
 }
