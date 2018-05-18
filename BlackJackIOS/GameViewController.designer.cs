@@ -13,8 +13,24 @@ namespace BlackJackIOS
     [Register ("GameViewController")]
     partial class GameViewController
     {
+        [Outlet]
+        UIKit.UIButton ButtonHit { get; set; }
+
+
+        [Outlet]
+        UIKit.UIButton ButtonStick { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (ButtonHit != null) {
+                ButtonHit.Dispose ();
+                ButtonHit = null;
+            }
+
+            if (ButtonStick != null) {
+                ButtonStick.Dispose ();
+                ButtonStick = null;
+            }
         }
     }
 }

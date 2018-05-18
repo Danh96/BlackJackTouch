@@ -2,14 +2,14 @@
   <MonoDevelop.Ide.ItemProperties.BlackJackIOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.15850A33-1D4B-4D11-A42B-BD89F890A986">
     <MonoDevelop.MacDev.AppleDevelopmentTeam />
   </MonoDevelop.Ide.ItemProperties.BlackJackIOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="BlackJackIOS/Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BlackJackIOS/Game.storyboard">
     <Files>
-      <File FileName="BlackJackIOS/ViewController.cs" Line="28" Column="2" />
-      <File FileName="BlackJackIOS/GameViewController.cs" Line="18" Column="13" />
+      <File FileName="BlackJackIOS/ViewController.cs" Line="26" Column="62" />
+      <File FileName="BlackJackIOS/GameViewController.cs" Line="20" Column="4" />
       <File FileName="BlackJackIOS/Main.storyboard" />
       <File FileName="BlackJackIOS/LaunchScreen.storyboard" />
+      <File FileName="BlackJackIOS/Main.cs" Line="1" Column="1" />
       <File FileName="BlackJackIOS/Game.storyboard" />
-      <File FileName="BlackJackIOS/Main.cs" Line="12" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />

@@ -57,7 +57,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hKx-2B-yOk"/>
+                    <navigationItem key="navigationItem" id="hKx-2B-yOk">
+                        <barButtonItem key="backBarButtonItem" title=" " id="p6a-cR-dxw"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="ButtonStartGame" destination="0kH-xM-stx" id="name-outlet-0kH-xM-stx"/>
                     </connections>
