@@ -1,6 +1,7 @@
 using System;
 using System.Drawing;
 using Foundation;
+using Mono;
 using UIKit;
 
 namespace BlackJackIOS
@@ -15,6 +16,7 @@ namespace BlackJackIOS
 		public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
+
 			//NavigationController.NavigationBar.TopItem.TitleView = new UIImageView(UIImage.FromBundle("Logo"))
             //{
             //    Frame = new RectangleF(0, 0, 100, 30),
