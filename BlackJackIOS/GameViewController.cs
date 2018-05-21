@@ -8,6 +8,8 @@ namespace BlackJackIOS
 {
 	public partial class GameViewController : UIViewController
 	{
+		PlayingCard Card;
+
 		public GameViewController (IntPtr handle) : base (handle)
 		{
 			
@@ -17,11 +19,13 @@ namespace BlackJackIOS
         {
             base.ViewWillAppear(animated);
 
-			NavigationController.NavigationBar.TopItem.TitleView = new UIImageView(UIImage.FromBundle("Logo"))
-            {
-                Frame = new RectangleF(0, 0, 100, 30),
-                ContentMode = UIViewContentMode.ScaleAspectFit
-            };
+			//NavigationController.NavigationBar.TopItem.TitleView = new UIImageView(UIImage.FromBundle("Logo"))
+            //{
+            //    Frame = new RectangleF(0, 0, 100, 30),
+            //    ContentMode = UIViewContentMode.ScaleAspectFit
+            //};
+
+			//NavigationController.NavigationBar.TopItem.Title = "Black Jack";
         }
 
 		public override void ViewDidLoad()
@@ -43,7 +47,10 @@ namespace BlackJackIOS
 			ButtonHit.Layer.CornerRadius = 5;
 			ButtonHit.Layer.BorderWidth = 1;
 			ButtonHit.Layer.BorderColor = UIColor.White.CGColor;
-            
+
+			Card = PlayingCard.Create();
+			Card.Frame = PlayerFirstCard.Frame;
+			PlayerFirstCard.AddSubview(Card);
         }
 	}
 }

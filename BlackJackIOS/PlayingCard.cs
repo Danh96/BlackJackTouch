@@ -1,8 +1,7 @@
-﻿using System;
-
-using Foundation;
-using Mono;
+﻿using Foundation;
+using System;
 using UIKit;
+using ObjCRuntime;
 
 namespace BlackJackIOS
 {
@@ -19,6 +18,14 @@ namespace BlackJackIOS
         protected PlayingCard(IntPtr handle) : base(handle)
         {
             // Note: this .ctor should not contain any initialization logic.
+        }
+
+		public static PlayingCard Create()
+        {
+			var CardArray = NSBundle.MainBundle.LoadNib("PlayingCard", null, null);
+			var Card = Runtime.GetNSObject<PlayingCard>(CardArray.ValueAt(0));
+
+			return Card;
         }
     }
 }
