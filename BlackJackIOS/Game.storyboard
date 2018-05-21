@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="E3L-bQ-KzF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
@@ -77,7 +77,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players hand total: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysD-iv-CXX">
-                                <rect key="frame" x="16" y="408" width="343" height="11.5"/>
+                                <rect key="frame" x="16" y="400" width="343" height="19"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -200,7 +200,6 @@
                             <constraint firstItem="RcM-j1-eUz" firstAttribute="top" secondItem="CSU-NX-T9k" secondAttribute="bottom" constant="60" id="IMI-sV-Oyh"/>
                             <constraint firstAttribute="trailing" secondItem="rDk-mB-9aJ" secondAttribute="trailing" id="K8T-bt-iSL"/>
                             <constraint firstItem="yEy-SN-Dam" firstAttribute="top" secondItem="rDk-mB-9aJ" secondAttribute="bottom" id="K8l-fL-MlL"/>
-                            <constraint firstItem="ysD-iv-CXX" firstAttribute="top" secondItem="CU9-sq-1ya" secondAttribute="bottom" constant="42.5" id="Oda-Dh-Vki"/>
                             <constraint firstItem="rDk-mB-9aJ" firstAttribute="leading" secondItem="EoD-0M-YI6" secondAttribute="leading" id="QHa-xs-ad0"/>
                             <constraint firstItem="kCt-hk-hMF" firstAttribute="leading" secondItem="EoD-0M-YI6" secondAttribute="leading" id="R9K-1f-dPi"/>
                             <constraint firstAttribute="trailing" secondItem="kCt-hk-hMF" secondAttribute="trailing" id="aL3-K1-UrM"/>
@@ -212,6 +211,7 @@
                             <constraint firstItem="CU9-sq-1ya" firstAttribute="leading" secondItem="EoD-0M-YI6" secondAttribute="leading" constant="16" id="pHH-uO-N9x"/>
                             <constraint firstAttribute="trailing" secondItem="98X-FJ-0zx" secondAttribute="trailing" constant="16" id="pNS-Wc-VdG"/>
                             <constraint firstItem="kCt-hk-hMF" firstAttribute="top" secondItem="blG-Np-6Tz" secondAttribute="bottom" id="vtW-Sk-Dvd"/>
+                            <constraint firstItem="ysD-iv-CXX" firstAttribute="top" secondItem="CU9-sq-1ya" secondAttribute="bottom" constant="34.5" id="zRh-ea-USQ"/>
                             <constraint firstItem="CSU-NX-T9k" firstAttribute="leading" secondItem="EoD-0M-YI6" secondAttribute="leading" constant="16" id="zeR-bN-KKb"/>
                             <constraint firstItem="98X-FJ-0zx" firstAttribute="leading" secondItem="EoD-0M-YI6" secondAttribute="leading" constant="16" id="zoU-Ur-CCq"/>
                         </constraints>
@@ -219,6 +219,21 @@
                     <connections>
                         <outlet property="ButtonHit" destination="7qB-dN-VGW" id="rvA-yr-2Uy"/>
                         <outlet property="ButtonStick" destination="RcM-j1-eUz" id="Jat-W9-OLx"/>
+                        <outlet property="DealerFifthCard" destination="huq-Yy-NW1" id="dEB-0O-Og4"/>
+                        <outlet property="DealerFirstCard" destination="yVU-I9-fbw" id="YHd-WU-rpG"/>
+                        <outlet property="DealerFourthCard" destination="fCz-VY-1cJ" id="59S-rs-ORh"/>
+                        <outlet property="DealerSecondCard" destination="cbp-EV-jXH" id="KpD-aO-idp"/>
+                        <outlet property="DealerThirdCard" destination="fCz-VY-1cJ" id="Ypp-oF-2EO"/>
+                        <outlet property="LabelConvoText" destination="CU9-sq-1ya" id="0MA-ue-cYe"/>
+                        <outlet property="LabelDealerScore" destination="xWg-42-G4j" id="GhY-Ku-QBP"/>
+                        <outlet property="LabelDealersHandTotal" destination="jLf-wE-EQ8" id="M1l-Gc-Ws6"/>
+                        <outlet property="LabelPlayerScore" destination="c3V-CZ-KN8" id="JZE-7N-2tQ"/>
+                        <outlet property="LabelPlayersHandTotal" destination="ysD-iv-CXX" id="KPg-pT-RgM"/>
+                        <outlet property="PlayerFifthCard" destination="cdE-5I-8jm" id="tlQ-ZT-PGI"/>
+                        <outlet property="PlayerFirstCard" destination="UiZ-DZ-KoL" id="onW-1n-gYm"/>
+                        <outlet property="PlayerFourthCard" destination="QhW-We-7Py" id="iFP-ql-0bK"/>
+                        <outlet property="PlayerSecondCard" destination="7aA-Fv-If1" id="Ueo-ii-4Eg"/>
+                        <outlet property="PlayerThirdCard" destination="Qah-vE-kQ1" id="C7y-GE-Nmr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHO-Xh-voU" userLabel="First Responder" sceneMemberID="firstResponder"/>

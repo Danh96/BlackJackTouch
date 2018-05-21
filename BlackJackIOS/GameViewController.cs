@@ -17,11 +17,11 @@ namespace BlackJackIOS
         {
             base.ViewWillAppear(animated);
 
-			//NavigationController.NavigationBar.TopItem.TitleView = new UIImageView(UIImage.FromBundle("Logo"))
-            //{
-            //    Frame = new RectangleF(0, 0, 100, 30),
-            //    ContentMode = UIViewContentMode.ScaleAspectFit
-            //};
+			NavigationController.NavigationBar.TopItem.TitleView = new UIImageView(UIImage.FromBundle("Logo"))
+            {
+                Frame = new RectangleF(0, 0, 100, 30),
+                ContentMode = UIViewContentMode.ScaleAspectFit
+            };
         }
 
 		public override void ViewDidLoad()
@@ -30,7 +30,7 @@ namespace BlackJackIOS
 			NavigationController.SetNavigationBarHidden(false, true);
 
 			NavigationController.NavigationBar.TintColor = UIColor.White;
-            NavigationController.NavigationBar.BarTintColor = UIColor.FromRGB(245, 0, 0);
+			NavigationController.NavigationBar.BarTintColor = UIColor.FromRGB(245, 0, 0);
 			NavigationController.NavigationBar.Translucent = false;
 
 			NavigationController.NavigationBar.SetBackgroundImage(new UIImage(), UIBarMetrics.Default);
