@@ -33,5 +33,7 @@
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>UIStatusBarHidden</key>
 	<true/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
 </dict>
 </plist>
