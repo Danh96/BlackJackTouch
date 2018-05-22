@@ -2,6 +2,8 @@
 using System;
 using UIKit;
 using ObjCRuntime;
+using DeckOfCards;
+using System.Linq;
 
 namespace BlackJackIOS
 {
@@ -20,20 +22,71 @@ namespace BlackJackIOS
             // Note: this .ctor should not contain any initialization logic.
         }
 
-		public static PlayingCard Create()
+		public static PlayingCard Create(Card card)
         {
-			var CardArray = NSBundle.MainBundle.LoadNib("PlayingCard", null, null);
-			var Card = Runtime.GetNSObject<PlayingCard>(CardArray.ValueAt(0));
+			var cardView = (PlayingCard)Nib.Instantiate(null, null).First();
 
-			Card.Layer.BorderWidth = 1;
-			Card.Layer.CornerRadius = 5;
-			Card.Layer.BorderColor = UIColor.Black.CGColor;
+			cardView.Layer.BorderWidth = 1;
+			cardView.Layer.CornerRadius = 5;
+			cardView.Layer.BorderColor = UIColor.Black.CGColor;
 
-			Card.CardSuitImage.Image = UIImage.FromBundle("Diamonds");
-			Card.CardValueTop.Text = "3";
-			Card.CardValueBottom.Text = "3";
+			cardView.CardSuitImage.Image = GetcardSuit(card);
+			cardView.CardValueTop.Text = GetCardValue(card);
+			cardView.CardValueBottom.Text = GetCardValue(card);
 
-			return Card;
+			return cardView;
+        }
+
+		private static UIImage GetcardSuit(Card card)
+        {
+			UIImage suitIconImage;
+
+            switch (card.Suit)
+            {
+                case CardSuit.Clubs:
+					suitIconImage = UIImage.FromBundle("Clubs");
+                    break;
+                case CardSuit.Spades:
+					suitIconImage = UIImage.FromBundle("Spades");
+                    break;
+                case CardSuit.Diamonds:
+					suitIconImage = UIImage.FromBundle("Diamonds");
+                    break;
+                case CardSuit.Hearts:
+					suitIconImage = UIImage.FromBundle("Hearts");
+                    break;
+                default:
+					suitIconImage = null;
+                    break;
+            }
+
+            return suitIconImage;
+        }
+
+		public static string GetCardValue(Card card)
+        {
+            string cardValue;
+
+            switch (card.Value)
+            {
+                case 1:
+                    cardValue = "A";
+                    break;
+                case 11:
+                    cardValue = "J";
+                    break;
+                case 12:
+                    cardValue = "Q";
+                    break;
+                case 13:
+                    cardValue = "K";
+                    break;
+                default:
+                    cardValue = card.Value.ToString();
+                    break;
+            }
+
+            return cardValue;
         }
     }
 }

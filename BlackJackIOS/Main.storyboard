@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zix-8t-JpM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
@@ -43,10 +43,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kH-xM-stx">
-                                <rect key="frame" x="84" y="437" width="206" height="50"/>
+                                <rect key="frame" x="84" y="464" width="206" height="40"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="7Se-N9-snY"/>
+                                    <constraint firstAttribute="height" constant="40" id="7Se-N9-snY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="Start Game">
@@ -63,7 +63,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5kJ-52-gbu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0K9-nJ-tas"/>
-                            <constraint firstItem="0kH-xM-stx" firstAttribute="top" secondItem="EBc-0Q-ET5" secondAttribute="bottom" constant="23" id="4uF-Kj-M2P"/>
+                            <constraint firstItem="0kH-xM-stx" firstAttribute="top" secondItem="EBc-0Q-ET5" secondAttribute="bottom" constant="50" id="4uF-Kj-M2P"/>
                             <constraint firstItem="5kJ-52-gbu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4yu-ba-U0G"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5kJ-52-gbu" secondAttribute="bottom" id="IQJ-iq-yAU"/>
                             <constraint firstItem="EBc-0Q-ET5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="33" id="VBv-Ql-JoJ"/>
