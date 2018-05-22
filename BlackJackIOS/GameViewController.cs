@@ -1,5 +1,6 @@
 using System;
 using System.Drawing;
+using CoreGraphics;
 using Foundation;
 using Mono;
 using UIKit;
@@ -18,14 +19,13 @@ namespace BlackJackIOS
 		public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
-
-			//NavigationController.NavigationBar.TopItem.TitleView = new UIImageView(UIImage.FromBundle("Logo"))
-            //{
-            //    Frame = new RectangleF(0, 0, 100, 30),
-            //    ContentMode = UIViewContentMode.ScaleAspectFit
-            //};
-
-			//NavigationController.NavigationBar.TopItem.Title = "Black Jack";
+                     
+			var titleView = new UIView(new CGRect (0, 0, 120, 40));
+			var titleImageView = new UIImageView(UIImage.FromBundle("Logo"));
+			titleImageView.ContentMode = UIViewContentMode.ScaleAspectFit;
+			titleImageView.Frame = new CGRect(0, 0, titleView.Frame.Width, titleView.Frame.Height);
+			titleView.AddSubview(titleImageView);
+			NavigationController.NavigationBar.TopItem.TitleView = titleView;
         }
 
 		public override void ViewDidLoad()

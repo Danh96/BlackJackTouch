@@ -25,6 +25,14 @@ namespace BlackJackIOS
 			var CardArray = NSBundle.MainBundle.LoadNib("PlayingCard", null, null);
 			var Card = Runtime.GetNSObject<PlayingCard>(CardArray.ValueAt(0));
 
+			Card.Layer.BorderWidth = 1;
+			Card.Layer.CornerRadius = 5;
+			Card.Layer.BorderColor = UIColor.Black.CGColor;
+
+			Card.CardSuitImage.Image = UIImage.FromBundle("Diamonds");
+			Card.CardValueTop.Text = "3";
+			Card.CardValueBottom.Text = "3";
+
 			return Card;
         }
     }

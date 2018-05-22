@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,10 +43,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kH-xM-stx">
-                                <rect key="frame" x="84" y="447" width="206" height="40"/>
+                                <rect key="frame" x="84" y="437" width="206" height="50"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="7Se-N9-snY"/>
+                                    <constraint firstAttribute="height" constant="50" id="7Se-N9-snY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="Start Game">
@@ -53,26 +54,24 @@
                                 </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="EBc-0Q-ET5">
-                                <rect key="frame" x="49" y="253" width="277" height="160"/>
+                                <rect key="frame" x="49" y="254" width="277" height="160"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="I40-b7-9WA"/>
+                                    <constraint firstAttribute="width" secondItem="EBc-0Q-ET5" secondAttribute="height" multiplier="277:160" id="Ovo-gX-axQ"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5kJ-52-gbu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0K9-nJ-tas"/>
+                            <constraint firstItem="0kH-xM-stx" firstAttribute="top" secondItem="EBc-0Q-ET5" secondAttribute="bottom" constant="23" id="4uF-Kj-M2P"/>
                             <constraint firstItem="5kJ-52-gbu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4yu-ba-U0G"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5kJ-52-gbu" secondAttribute="bottom" id="IQJ-iq-yAU"/>
-                            <constraint firstItem="0kH-xM-stx" firstAttribute="top" secondItem="EBc-0Q-ET5" secondAttribute="bottom" constant="34" id="LVK-vA-GQZ"/>
-                            <constraint firstItem="0kH-xM-stx" firstAttribute="top" secondItem="EBc-0Q-ET5" secondAttribute="bottom" constant="34" id="Rnq-gA-RpX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="EBc-0Q-ET5" secondAttribute="trailing" constant="33" id="fjh-QN-vvW"/>
-                            <constraint firstItem="EBc-0Q-ET5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="189" id="h69-yX-aIf"/>
+                            <constraint firstItem="EBc-0Q-ET5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="33" id="VBv-Ql-JoJ"/>
                             <constraint firstItem="0kH-xM-stx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="68" id="hdq-rQ-3Xp"/>
                             <constraint firstAttribute="trailing" secondItem="5kJ-52-gbu" secondAttribute="trailing" id="lLf-hU-21l"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0kH-xM-stx" secondAttribute="trailing" constant="69" id="lYf-r9-Hh1"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0kH-xM-stx" secondAttribute="bottom" constant="180" id="rrS-V7-lwF"/>
-                            <constraint firstItem="EBc-0Q-ET5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="33" id="xG4-WE-0Zh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EBc-0Q-ET5" secondAttribute="trailing" constant="33" id="pOu-1a-J25"/>
+                            <constraint firstItem="EBc-0Q-ET5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="190" id="z3w-X7-jI3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hKx-2B-yOk">
@@ -84,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-0.8" y="-0.4497751"/>
+            <point key="canvasLocation" x="-0.80000000000000004" y="-0.44977509999999998"/>
         </scene>
     </scenes>
     <resources>

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,9 +19,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mII-Ft-cYD">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clubs.png" translatesAutoresizingMaskIntoConstraints="NO" id="N3c-mc-nev">
-                            <rect key="frame" x="124" y="265" width="127" height="137"/>
-                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fD-YA-6eD">
                             <rect key="frame" x="363" y="648.5" width="7" height="13.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -33,17 +31,23 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N3c-mc-nev">
+                            <rect key="frame" x="182.5" y="327" width="10" height="12"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="N3c-mc-nev" secondAttribute="height" multiplier="218:259" id="4g2-u9-UuE"/>
+                                <constraint firstAttribute="width" constant="10" id="fZC-de-PeW"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="N3c-mc-nev" firstAttribute="centerX" secondItem="mII-Ft-cYD" secondAttribute="centerX" id="1L7-LG-yrN"/>
                         <constraint firstItem="ycH-dd-Tob" firstAttribute="leading" secondItem="mII-Ft-cYD" secondAttribute="leading" constant="5" id="5Wz-JE-Moq"/>
-                        <constraint firstItem="N3c-mc-nev" firstAttribute="top" secondItem="mII-Ft-cYD" secondAttribute="top" constant="265" id="LvA-Ri-maN"/>
-                        <constraint firstItem="N3c-mc-nev" firstAttribute="leading" secondItem="mII-Ft-cYD" secondAttribute="leading" constant="124" id="RDd-ns-LX4"/>
                         <constraint firstItem="ycH-dd-Tob" firstAttribute="top" secondItem="mII-Ft-cYD" secondAttribute="top" constant="5" id="TLg-eP-EgO"/>
-                        <constraint firstAttribute="trailing" secondItem="N3c-mc-nev" secondAttribute="trailing" constant="124" id="g5w-ec-snO"/>
+                        <constraint firstItem="N3c-mc-nev" firstAttribute="centerY" secondItem="mII-Ft-cYD" secondAttribute="centerY" id="UFc-5e-udk"/>
                         <constraint firstAttribute="bottom" secondItem="5fD-YA-6eD" secondAttribute="bottom" constant="5" id="hvm-US-uNC"/>
                         <constraint firstAttribute="trailing" secondItem="5fD-YA-6eD" secondAttribute="trailing" constant="5" id="n39-eq-0g7"/>
-                        <constraint firstAttribute="bottom" secondItem="N3c-mc-nev" secondAttribute="bottom" constant="265" id="wcS-og-Agb"/>
                     </constraints>
                 </view>
             </subviews>
@@ -62,7 +66,4 @@
             <point key="canvasLocation" x="57.5" y="-87.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="Clubs.png" width="230" height="239"/>
-    </resources>
 </document>
