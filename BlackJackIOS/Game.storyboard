@@ -223,7 +223,7 @@
                         <outlet property="DealerFirstCard" destination="yVU-I9-fbw" id="YHd-WU-rpG"/>
                         <outlet property="DealerFourthCard" destination="fCz-VY-1cJ" id="59S-rs-ORh"/>
                         <outlet property="DealerSecondCard" destination="cbp-EV-jXH" id="KpD-aO-idp"/>
-                        <outlet property="DealerThirdCard" destination="fCz-VY-1cJ" id="Ypp-oF-2EO"/>
+                        <outlet property="DealerThirdCard" destination="6Pg-ff-RgU" id="3xu-He-5Qx"/>
                         <outlet property="LabelConvoText" destination="CU9-sq-1ya" id="0MA-ue-cYe"/>
                         <outlet property="LabelDealerScore" destination="xWg-42-G4j" id="GhY-Ku-QBP"/>
                         <outlet property="LabelDealersHandTotal" destination="jLf-wE-EQ8" id="M1l-Gc-Ws6"/>

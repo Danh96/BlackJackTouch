@@ -69,7 +69,7 @@ namespace BlackJackIOS
             
 			CancellationToken = new CancellationTokenSource();
 
-			GameStart();
+			SelectMatchPointsDialogPopUp();
         }
 
 		private void GameStart()
@@ -89,20 +89,16 @@ namespace BlackJackIOS
 
 			LabelPlayerScore.Text = "Players score: " + PlayerGameScore.ToString();
 			LabelDealerScore.Text = "Dealers score: " + DealerGameScore.ToString();
+
+			//dealersFirstCard.Visibility = ViewStates.Visible;
+			//dealersSecondCard.Visibility = ViewStates.Visible;
+			//dealersThirdCard.Visibility = ViewStates.Invisible;
+			//dealersFourthCard.Visibility = ViewStates.Invisible;
+			//dealersFifthCard.Visibility = ViewStates.Invisible;
+
+			//dealersFirstCard.SetDealerCardFaceDown();
+			//dealersSecondCard.SetDealerCardFaceDown();
             
-            //dealersFirstCard.Visibility = ViewStates.Visible;
-            //dealersSecondCard.Visibility = ViewStates.Visible;
-            //dealersThirdCard.Visibility = ViewStates.Invisible;
-            //dealersFourthCard.Visibility = ViewStates.Invisible;
-            //dealersFifthCard.Visibility = ViewStates.Invisible;
-
-            //dealersFirstCard.SetDealerCardFaceDown();
-            //dealersSecondCard.SetDealerCardFaceDown();
-
-            //playersThirdCard.Visibility = ViewStates.Invisible;
-            //playersFourthCard.Visibility = ViewStates.Invisible;
-            //playersFifthCard.Visibility = ViewStates.Invisible;
-
             PlayersHand.Add(Deck.RemoveTopCard());
             DealersHand.Add(Deck.RemoveTopCard());
             PlayersHand.Add(Deck.RemoveTopCard());
@@ -409,6 +405,32 @@ namespace BlackJackIOS
             ButtonHit.Layer.CornerRadius = 5;
             ButtonHit.Layer.BorderWidth = 1;
             ButtonHit.Layer.BorderColor = UIColor.White.CGColor;
+
+			LabelDealersHandTotal.Text = null;
+			LabelPlayersHandTotal.Text = null;
+			LabelConvoText.Text = null;
+			LabelConvoText.Font = UIFont.BoldSystemFontOfSize(26);
+		}
+
+		private void SetMaxMatchPoint(int maxMatchPoint)
+		{
+			MaxMatchPoint = maxMatchPoint;
+			GameStart();
+		}
+
+		private void SelectMatchPointsDialogPopUp()
+		{
+			UIAlertController actionSheetAlert = UIAlertController.Create("New Game", "Please select the number of points you want to play to.", UIAlertControllerStyle.Alert);
+
+			actionSheetAlert.View.TintColor = UIColor.FromRGB(245, 0, 0);
+
+			actionSheetAlert.AddAction(UIAlertAction.Create("3", UIAlertActionStyle.Default, (action) => SetMaxMatchPoint(3)));
+
+			actionSheetAlert.AddAction(UIAlertAction.Create("5", UIAlertActionStyle.Default, (action) => SetMaxMatchPoint(5)));
+
+			actionSheetAlert.AddAction(UIAlertAction.Create("10", UIAlertActionStyle.Default, (action) => SetMaxMatchPoint(10)));
+
+            this.PresentViewController(actionSheetAlert, true, null);
 		}
 	}
 }
