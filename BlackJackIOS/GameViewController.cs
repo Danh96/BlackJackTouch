@@ -90,14 +90,18 @@ namespace BlackJackIOS
 			LabelPlayerScore.Text = "Players score: " + PlayerGameScore.ToString();
 			LabelDealerScore.Text = "Dealers score: " + DealerGameScore.ToString();
 
-			//dealersFirstCard.Visibility = ViewStates.Visible;
-			//dealersSecondCard.Visibility = ViewStates.Visible;
-			//dealersThirdCard.Visibility = ViewStates.Invisible;
-			//dealersFourthCard.Visibility = ViewStates.Invisible;
-			//dealersFifthCard.Visibility = ViewStates.Invisible;
+			DealerFirstCard.Alpha = 0;
+			DealerSecondCard.Alpha = 0;
+			DealerThirdCard.Alpha = 0;
+			DealerFourthCard.Alpha = 0;
+			DealerFifthCard.Alpha = 0;
 
 			//dealersFirstCard.SetDealerCardFaceDown();
 			//dealersSecondCard.SetDealerCardFaceDown();
+
+			PlayerThirdCard.Alpha = 0;
+			PlayerFourthCard.Alpha = 0;
+			PlayerFifthCard.Alpha = 0;
             
             PlayersHand.Add(Deck.RemoveTopCard());
             DealersHand.Add(Deck.RemoveTopCard());
@@ -130,12 +134,15 @@ namespace BlackJackIOS
                         break;
                     case 3:
 						AddCardToContainer(card, PlayerThirdCard);
+						PlayerThirdCard.Alpha = 1;
                         break;
                     case 4:
 						AddCardToContainer(card, PlayerFourthCard);
+						PlayerFourthCard.Alpha = 1;
                         break;
                     case 5:
 						AddCardToContainer(card, PlayerFifthCard);
+						PlayerFifthCard.Alpha = 1;
                         break;
                 }
             }
@@ -158,18 +165,23 @@ namespace BlackJackIOS
                 {
                     case 1:
 						AddCardToContainer(card, DealerFirstCard);
+						DealerFirstCard.Alpha = 1;
                         break;
                     case 2:
 						AddCardToContainer(card, DealerSecondCard);
+						DealerSecondCard.Alpha = 1;
                         break;
                     case 3:
 						AddCardToContainer(card, DealerThirdCard);
+						DealerThirdCard.Alpha = 1;
                         break;
                     case 4:
 						AddCardToContainer(card, DealerFourthCard);
+						DealerFourthCard.Alpha = 1;
                         break;
                     case 5:
 						AddCardToContainer(card, DealerFifthCard);
+						DealerFifthCard.Alpha = 1;
                         break;
                 }
             }
