@@ -372,12 +372,9 @@ namespace BlackJackIOS
                 {
                     if (PlayerGameScore == MaxMatchPoint || DealerGameScore == MaxMatchPoint)
                     {
-						//Intent intent = new Intent(this, typeof(EndGameActivity));
-						//intent.PutExtra("playerGameScore", PlayerGameScore);
-						//intent.PutExtra("dealerGameScore", DealerGameScore);
-						//StartActivity(intent);
-						//Finish();
-						LabelConvoText.Text = "End";
+						UIStoryboard endGameStoryBoard = UIStoryboard.FromName("EndGame", NSBundle.MainBundle);
+						EndGameViewController endGameViewController = endGameStoryBoard.InstantiateViewController("EndGameViewController") as EndGameViewController;
+						NavigationController.PresentViewController(endGameViewController, true, null);
                     }
                     else
                     {

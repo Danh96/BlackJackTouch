@@ -96,6 +96,7 @@
     <InterfaceDefinition Include="Main.storyboard" />
     <InterfaceDefinition Include="Game.storyboard" />
     <InterfaceDefinition Include="PlayingCard.xib" />
+    <InterfaceDefinition Include="EndGame.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -120,6 +121,10 @@
     <Compile Include="CardSuit.cs" />
     <Compile Include="IDeck.cs" />
     <Compile Include="PlayingCardDeck.cs" />
+    <Compile Include="EndGameViewController.cs" />
+    <Compile Include="EndGameViewController.designer.cs">
+      <DependentUpon>EndGameViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Background.jpg" />

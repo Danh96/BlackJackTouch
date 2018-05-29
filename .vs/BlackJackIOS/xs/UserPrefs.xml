@@ -1,11 +1,10 @@
 ﻿<Properties StartupConfiguration="{F1EC3B33-1D03-4709-B9C2-03E63E674B51}|Default">
-  <MonoDevelop.Ide.ItemProperties.BlackJackIOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6DDEA7E9-D934-4925-BB38-5F852F44AFC3" automaticSigning="False" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BlackJackIOS/GameViewController.cs">
+  <MonoDevelop.Ide.ItemProperties.BlackJackIOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.15850A33-1D4B-4D11-A42B-BD89F890A986" automaticSigning="False" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BlackJackIOS/Main.cs">
     <Files>
-      <File FileName="BlackJackIOS/ViewController.cs" Line="33" Column="6" />
-      <File FileName="BlackJackIOS/GameViewController.cs" Line="64" Column="31" />
-      <File FileName="BlackJackIOS/PlayingCard.cs" Line="38" Column="1" />
-      <File FileName="BlackJackIOS/Info.plist" />
+      <File FileName="BlackJackIOS/ViewController.cs" Line="32" Column="71" />
+      <File FileName="BlackJackIOS/GameViewController.cs" Line="378" Column="9" />
+      <File FileName="BlackJackIOS/EndGameViewController.cs" Line="12" Column="2" />
       <File FileName="BlackJackIOS/Main.cs" Line="12" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
