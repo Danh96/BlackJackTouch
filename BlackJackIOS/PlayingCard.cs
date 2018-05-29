@@ -33,8 +33,25 @@ namespace BlackJackIOS
 			cardView.CardSuitImage.Image = GetcardSuit(card);
 			cardView.CardValueTop.Text = GetCardValue(card);
 			cardView.CardValueBottom.Text = GetCardValue(card);
+			cardView.CardBackgroundImage.Image = null;
 
 			return cardView;
+        }
+
+		public static PlayingCard SetDealerCardFaceDown()
+        {
+            var cardView = (PlayingCard)Nib.Instantiate(null, null).First();
+
+            cardView.Layer.BorderWidth = 1;
+            cardView.Layer.CornerRadius = 5;
+            cardView.Layer.BorderColor = UIColor.Black.CGColor;
+
+			cardView.CardSuitImage.Image = null;
+            cardView.CardValueTop.Text = "";
+            cardView.CardValueBottom.Text = "";
+			cardView.CardBackgroundImage.Image = UIImage.FromBundle("CardBack");
+
+            return cardView;
         }
 
 		private static UIImage GetcardSuit(Card card)

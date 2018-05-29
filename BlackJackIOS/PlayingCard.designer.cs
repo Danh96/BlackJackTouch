@@ -1,45 +1,50 @@
 // WARNING
 //
-// This file has been generated automatically by Visual Studio from the outlets and
-// actions declared in your storyboard file.
-// Manual changes to this file will not be maintained.
+// This file has been generated automatically by Visual Studio to store outlets and
+// actions made in the UI designer. If it is removed, they will be lost.
+// Manual changes to this file may not be handled correctly.
 //
 using Foundation;
-using System;
 using System.CodeDom.Compiler;
 
 namespace BlackJackIOS
 {
-    [Register ("PlayingCard")]
-    partial class PlayingCard
-    {
-        [Outlet]
-        UIKit.UIImageView CardSuitImage { get; set; }
+	[Register ("PlayingCard")]
+	partial class PlayingCard
+	{
+		[Outlet]
+		UIKit.UIImageView CardBackgroundImage { get; set; }
 
+		[Outlet]
+		UIKit.UIImageView CardSuitImage { get; set; }
 
-        [Outlet]
-        UIKit.UILabel CardValueBottom { get; set; }
+		[Outlet]
+		UIKit.UILabel CardValueBottom { get; set; }
 
+		[Outlet]
+		UIKit.UILabel CardValueTop { get; set; }
+		
+		void ReleaseDesignerOutlets ()
+		{
+			if (CardBackgroundImage != null) {
+				CardBackgroundImage.Dispose ();
+				CardBackgroundImage = null;
+			}
 
-        [Outlet]
-        UIKit.UILabel CardValueTop { get; set; }
+			if (CardSuitImage != null) {
+				CardSuitImage.Dispose ();
+				CardSuitImage = null;
+			}
 
-        void ReleaseDesignerOutlets ()
-        {
-            if (CardSuitImage != null) {
-                CardSuitImage.Dispose ();
-                CardSuitImage = null;
-            }
+			if (CardValueBottom != null) {
+				CardValueBottom.Dispose ();
+				CardValueBottom = null;
+			}
 
-            if (CardValueBottom != null) {
-                CardValueBottom.Dispose ();
-                CardValueBottom = null;
-            }
-
-            if (CardValueTop != null) {
-                CardValueTop.Dispose ();
-                CardValueTop = null;
-            }
-        }
-    }
+			if (CardValueTop != null) {
+				CardValueTop.Dispose ();
+				CardValueTop = null;
+			}
+		}
+	}
 }

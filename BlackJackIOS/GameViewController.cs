@@ -90,14 +90,11 @@ namespace BlackJackIOS
 			LabelPlayerScore.Text = "Players score: " + PlayerGameScore.ToString();
 			LabelDealerScore.Text = "Dealers score: " + DealerGameScore.ToString();
 
-			DealerFirstCard.Alpha = 0;
-			DealerSecondCard.Alpha = 0;
+			SetDealersCardsFaceDown(DealerFirstCard);
+            SetDealersCardsFaceDown(DealerSecondCard);
 			DealerThirdCard.Alpha = 0;
 			DealerFourthCard.Alpha = 0;
 			DealerFifthCard.Alpha = 0;
-
-			//dealersFirstCard.SetDealerCardFaceDown();
-			//dealersSecondCard.SetDealerCardFaceDown();
 
 			PlayerThirdCard.Alpha = 0;
 			PlayerFourthCard.Alpha = 0;
@@ -154,6 +151,13 @@ namespace BlackJackIOS
 			playingCard.Frame = new CGRect(0, 0, containerView.Frame.Width, containerView.Frame.Height);
 			containerView.AddSubview(playingCard);
 		}
+
+		private void SetDealersCardsFaceDown(UIView containerView)
+        {
+			var playingCard = PlayingCard.SetDealerCardFaceDown();
+            playingCard.Frame = new CGRect(0, 0, containerView.Frame.Width, containerView.Frame.Height);
+            containerView.AddSubview(playingCard);
+        }
 
 		private void PrintDealersHand(List<Card> hand)
         {

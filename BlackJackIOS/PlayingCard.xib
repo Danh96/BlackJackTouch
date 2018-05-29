@@ -39,14 +39,21 @@
                                 <constraint firstAttribute="width" constant="10" id="fZC-de-PeW"/>
                             </constraints>
                         </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tbW-Qc-i8J">
+                            <rect key="frame" x="1" y="1" width="373" height="665"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="N3c-mc-nev" firstAttribute="centerX" secondItem="mII-Ft-cYD" secondAttribute="centerX" id="1L7-LG-yrN"/>
                         <constraint firstItem="ycH-dd-Tob" firstAttribute="leading" secondItem="mII-Ft-cYD" secondAttribute="leading" constant="5" id="5Wz-JE-Moq"/>
+                        <constraint firstItem="tbW-Qc-i8J" firstAttribute="leading" secondItem="mII-Ft-cYD" secondAttribute="leading" constant="1" id="ChV-gR-hMq"/>
+                        <constraint firstAttribute="bottom" secondItem="tbW-Qc-i8J" secondAttribute="bottom" constant="1" id="Csk-zb-6R3"/>
                         <constraint firstItem="ycH-dd-Tob" firstAttribute="top" secondItem="mII-Ft-cYD" secondAttribute="top" constant="5" id="TLg-eP-EgO"/>
                         <constraint firstItem="N3c-mc-nev" firstAttribute="centerY" secondItem="mII-Ft-cYD" secondAttribute="centerY" id="UFc-5e-udk"/>
                         <constraint firstAttribute="bottom" secondItem="5fD-YA-6eD" secondAttribute="bottom" constant="5" id="hvm-US-uNC"/>
+                        <constraint firstItem="tbW-Qc-i8J" firstAttribute="top" secondItem="mII-Ft-cYD" secondAttribute="top" constant="1" id="j1E-Ft-6RI"/>
+                        <constraint firstAttribute="trailing" secondItem="tbW-Qc-i8J" secondAttribute="trailing" constant="1" id="lqG-LO-U8c"/>
                         <constraint firstAttribute="trailing" secondItem="5fD-YA-6eD" secondAttribute="trailing" constant="5" id="n39-eq-0g7"/>
                     </constraints>
                 </view>
@@ -59,6 +66,7 @@
                 <constraint firstItem="mII-Ft-cYD" firstAttribute="top" secondItem="pEj-2e-loa" secondAttribute="top" id="yy2-zm-vef"/>
             </constraints>
             <connections>
+                <outlet property="CardBackgroundImage" destination="tbW-Qc-i8J" id="F4w-Bh-qhW"/>
                 <outlet property="CardSuitImage" destination="N3c-mc-nev" id="IzV-oW-Med"/>
                 <outlet property="CardValueBottom" destination="5fD-YA-6eD" id="U2i-O9-gvd"/>
                 <outlet property="CardValueTop" destination="ycH-dd-Tob" id="eL6-SB-agl"/>
