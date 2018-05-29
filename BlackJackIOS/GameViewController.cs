@@ -30,6 +30,21 @@ namespace BlackJackIOS
 			
 		}
 
+		public override void ViewDidDisappear(bool animated)
+		{
+			base.ViewDidDisappear(animated);
+			CancellationToken.Cancel();
+		}
+
+		public override void ViewDidAppear(bool animated)
+		{
+			base.ViewDidAppear(animated);
+			CancellationToken = new CancellationTokenSource();
+            SetCardsToInvisible();
+            ResetGame();
+            SelectMatchPointsDialogPopUp();
+		}
+
 		public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
@@ -66,10 +81,34 @@ namespace BlackJackIOS
 
                 await DealersTurn(CancellationToken.Token);
 			};
+			SelectMatchPointsDialogPopUp();
             
 			CancellationToken = new CancellationTokenSource();
+        }
 
-			SelectMatchPointsDialogPopUp();
+		private void ResetGame()
+        {
+            SetCardsToInvisible();
+			LabelDealersHandTotal.Text = string.Empty;
+			LabelPlayersHandTotal.Text = string.Empty;
+            DealerGameScore = 0;
+            PlayerGameScore = 0;
+			LabelDealerScore.Text = "Dealers score: " + DealerGameScore.ToString();
+			LabelPlayerScore.Text = "Players score: " + PlayerGameScore.ToString();
+        }
+
+		private void SetCardsToInvisible()
+        {
+			DealerFirstCard.Alpha = 0;
+			DealerSecondCard.Alpha = 0;
+			DealerThirdCard.Alpha = 0;
+            DealerFourthCard.Alpha = 0;
+            DealerFifthCard.Alpha = 0;
+			PlayerFirstCard.Alpha = 0;
+			PlayerSecondCard.Alpha = 0;
+            PlayerThirdCard.Alpha = 0;
+            PlayerFourthCard.Alpha = 0;
+            PlayerFifthCard.Alpha = 0;
         }
 
 		private void GameStart()
@@ -92,10 +131,14 @@ namespace BlackJackIOS
 
 			SetDealersCardsFaceDown(DealerFirstCard);
             SetDealersCardsFaceDown(DealerSecondCard);
+			DealerFirstCard.Alpha = 1;
+            DealerSecondCard.Alpha = 1;
 			DealerThirdCard.Alpha = 0;
 			DealerFourthCard.Alpha = 0;
 			DealerFifthCard.Alpha = 0;
 
+			PlayerFirstCard.Alpha = 1;
+            PlayerSecondCard.Alpha = 1;
 			PlayerThirdCard.Alpha = 0;
 			PlayerFourthCard.Alpha = 0;
 			PlayerFifthCard.Alpha = 0;
@@ -374,6 +417,8 @@ namespace BlackJackIOS
                     {
 						UIStoryboard endGameStoryBoard = UIStoryboard.FromName("EndGame", NSBundle.MainBundle);
 						EndGameViewController endGameViewController = endGameStoryBoard.InstantiateViewController("EndGameViewController") as EndGameViewController;
+						endGameViewController.PlayerGameScore = PlayerGameScore;
+						endGameViewController.DealerGameScore = DealerGameScore;
 						NavigationController.PresentViewController(endGameViewController, true, null);
                     }
                     else
@@ -437,7 +482,7 @@ namespace BlackJackIOS
 
 			actionSheetAlert.View.TintColor = UIColor.FromRGB(245, 0, 0);
 
-			actionSheetAlert.AddAction(UIAlertAction.Create("3", UIAlertActionStyle.Default, (action) => SetMaxMatchPoint(3)));
+			actionSheetAlert.AddAction(UIAlertAction.Create("3", UIAlertActionStyle.Default, (action) => SetMaxMatchPoint(1)));
 
 			actionSheetAlert.AddAction(UIAlertAction.Create("5", UIAlertActionStyle.Default, (action) => SetMaxMatchPoint(5)));
 
