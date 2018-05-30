@@ -3,7 +3,7 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="BlackJackIOS/GameViewController.cs">
     <Files>
       <File FileName="BlackJackIOS/EndGameViewController.cs" Line="40" Column="4" />
-      <File FileName="BlackJackIOS/GameViewController.cs" Line="27" Column="35" />
+      <File FileName="BlackJackIOS/GameViewController.cs" Line="32" Column="4" />
       <File FileName="BlackJackIOS/ViewController.cs" Line="36" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
