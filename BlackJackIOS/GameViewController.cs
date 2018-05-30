@@ -12,8 +12,6 @@ namespace BlackJackIOS
 {
 	public partial class GameViewController : UIViewController
 	{
-        //TODO fix 5 cards under bug!
-
 		private CancellationTokenSource CancellationToken;
         
 		private SystemSound shuffleSound = new SystemSound(NSUrl.FromFilename("Sounds/ShuffleSound.mp3"));
