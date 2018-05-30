@@ -287,7 +287,7 @@ namespace BlackJackIOS
             {
                 if (!ct.IsCancellationRequested)
                 {
-                    if (PlayersHandTotal > 21)
+					if (PlayersHandTotal > 21 && PlayersHandTotal != 100)
                     {
                         PlayersHandTotal = -1;
 						LabelPlayersHandTotal.Text = "Players hand total: Bust!";
@@ -296,7 +296,7 @@ namespace BlackJackIOS
                         await DealersTurn(ct);
                     }
 
-                    if (DealersHandTotal > 21)
+					if (DealersHandTotal > 21 && DealersHandTotal != 100)
                     {
                         DealersHandTotal = -1;
 						LabelDealersHandTotal.Text = "Dealers hand total: Bust!";
