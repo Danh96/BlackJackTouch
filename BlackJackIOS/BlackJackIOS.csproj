@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Resources\Sounds\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -134,6 +135,7 @@
     <BundleResource Include="Resources\Hearts.png" />
     <BundleResource Include="Resources\Spades.png" />
     <BundleResource Include="Resources\Logo.png" />
+    <BundleResource Include="Resources\Sounds\ShuffleSound.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

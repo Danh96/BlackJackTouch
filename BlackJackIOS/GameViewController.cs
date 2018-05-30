@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using AudioToolbox;
 using CoreGraphics;
 using DeckOfCards;
 using Foundation;
@@ -14,6 +15,8 @@ namespace BlackJackIOS
         //TODO fix 5 cards under bug!
 
 		private CancellationTokenSource CancellationToken;
+        
+		private SystemSound shuffleSound = new SystemSound(NSUrl.FromFilename("Sounds/ShuffleSound.mp3"));
 
         private PlayingCardDeck Deck;
         private List<Card> PlayersHand = new List<Card>();
@@ -116,6 +119,7 @@ namespace BlackJackIOS
             Deck = new PlayingCardDeck();
 
             Deck.Shuffle();
+			StartShufflePlayer();
 
             PlayersHandTotal = 0;
             PlayersHand.Clear();
@@ -424,7 +428,6 @@ namespace BlackJackIOS
                     else
                     {
 						LabelConvoText.Text = "Next Round!";
-                        //StartShufflePlayer();
                         await Task.Delay(1000, ct);
                         GameStart();
                     }
@@ -489,6 +492,11 @@ namespace BlackJackIOS
 			actionSheetAlert.AddAction(UIAlertAction.Create("10", UIAlertActionStyle.Default, (action) => SetMaxMatchPoint(10)));
 
             this.PresentViewController(actionSheetAlert, true, null);
+		}
+
+		private void StartShufflePlayer()
+		{
+			shuffleSound.PlayAlertSound();
 		}
 	}
 }
