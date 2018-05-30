@@ -28,7 +28,8 @@ namespace BlackJackIOS
 
 			ButtonMainMenu.TouchUpInside += (sender, e) =>
             {
-				((UINavigationController)PresentingViewController).ViewControllers = new UIViewController[] { ((UINavigationController)PresentingViewController).ViewControllers[0] };                                                 
+				((UINavigationController)PresentingViewController).ViewControllers = new UIViewController[] { ((UINavigationController)PresentingViewController).ViewControllers[0] };
+				                                                  
 				PresentingViewController.DismissViewController(true, null);
             };
 

@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Threading;
 using System.Threading.Tasks;
 using CoreGraphics;
 using DeckOfCards;
 using Foundation;
-using Mono;
 using UIKit;
 
 namespace BlackJackIOS
@@ -83,7 +81,6 @@ namespace BlackJackIOS
 
                 await DealersTurn(CancellationToken.Token);
 			};
-			SelectMatchPointsDialogPopUp();
             
 			CancellationToken = new CancellationTokenSource();
         }
@@ -93,6 +90,7 @@ namespace BlackJackIOS
             SetCardsToInvisible();
 			LabelDealersHandTotal.Text = string.Empty;
 			LabelPlayersHandTotal.Text = string.Empty;
+			LabelConvoText.Text = string.Empty;
             DealerGameScore = 0;
             PlayerGameScore = 0;
 			LabelDealerScore.Text = "Dealers score: " + DealerGameScore.ToString();
@@ -484,7 +482,7 @@ namespace BlackJackIOS
 
 			actionSheetAlert.View.TintColor = UIColor.FromRGB(245, 0, 0);
 
-			actionSheetAlert.AddAction(UIAlertAction.Create("3", UIAlertActionStyle.Default, (action) => SetMaxMatchPoint(1)));
+			actionSheetAlert.AddAction(UIAlertAction.Create("3", UIAlertActionStyle.Default, (action) => SetMaxMatchPoint(3)));
 
 			actionSheetAlert.AddAction(UIAlertAction.Create("5", UIAlertActionStyle.Default, (action) => SetMaxMatchPoint(5)));
 
